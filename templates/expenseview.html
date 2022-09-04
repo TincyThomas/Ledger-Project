@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<style type="text/css">
+
+    th:tr{
+
+
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(150, 150, 150, 0.5);
+    }
+
+    td{
+        padding: 8px 8px;
+        border: 1px solid black;
+    }
+</style>
+<style>
+.container{
+padding:20px;
+position: relative;
+justify-content:center;
+}
+.center {
+position: absolute;
+left:30%;
+}
+</style>
+
+<div class ="container">
+    <div class = "center">
+    <h2>Expense Transactions</h2>
+   <table style="margin-left: 20px;">
+    <th>
+        <tr style="color: darkblue; ">
+         <td>Date</td>
+         <td>Receipt number</td>
+         <td>Header</td>
+         <td>Recipient Name</td>
+         <td>Amount</td>
+        </tr>
+         </th>
+         {% for row in rows %}
+          <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[3] }}</td>
+          <td>{{ row[4] }}</td>
+          </tr>
+         {% endfor %}
+         </tr>
+    </table>
+    <a href = "/">Go back to home page <br> </a>
+<a href = '/incomeview'>Go  to income view page <br> </a>
+<a href = '/expenseview'>Go back to expense viewing page <br> </a>
+<a href = "/viewheader">Go back to view header page <br> </a>
+<a href = "/incomeentry">Go back to income entry page <br> </a>
+<a href = "/expenseentry">Go back to expense entry page <br> </a>
+<a href = "/headcreation">Go back to header creation page <br> </a>
+    </div>
+</div>
+
+
+
+</html>

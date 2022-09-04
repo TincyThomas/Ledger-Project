@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Entry</title>
+</head>
+<style type="text/css">
+
+    th:tr{
+
+
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(150, 150, 150, 0.5);
+
+    }
+
+    td{
+        padding: 8px 8px;
+        border: 1px solid black;
+    }
+</style>
+<style>
+.container{
+padding:20px;
+position: relative;
+justify-content:center;
+}
+.center {
+position: absolute;
+left:50%;
+}
+</style>
+<body>
+    <div class ="container">
+    <div class = "center">
+        <form action="/saveexpenseentry" method = "POST">
+        <p>
+            Choose Header Name:<SELECT name="hn">
+            {% for j in rows %}
+	        <OPTION value={{j[0]}}>{{j[0]}}</OPTION>
+            {% endfor %}
+            </SELECT>
+        </p>
+        <div><p>Enter recipient name:</p>
+        <p><input type="text" name="rn" /></p></div>
+        <div><p>Enter amount:</p>
+        <p><input type="text" name="am" /></p></div>
+        <p><input type="submit" value="Submit"/></p>
+        </form>
+    </div>
+    </div>
+    <table style="margin-left: 20px;">
+        <th>
+        <tr style="color: darkblue; ">
+         <td>Date</td>
+         <td>Receipt number</td>
+         <td>Header</td>
+         <td>Recipient Name</td>
+         <td>Amount</td>
+        </tr>
+         </th>
+        {% for row in last %}
+          <tr>
+              <td>{{ row[0] }}</td>
+              <td>{{ row[1] }}</td>
+              <td>{{ row[2] }}</td>
+              <td>{{ row[3] }}</td>
+              <td>{{ row[4] }}</td>
+          </tr>
+         {% endfor %}
+         </tr>
+    </table>
+</body>
+</html>

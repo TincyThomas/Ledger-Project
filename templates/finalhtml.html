@@ -1,0 +1,89 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<h1 style="text-align:center;"> Financial Ledger </h1>
+<p style="text-align:center;"> Welcome to the Home Page ;P </p>
+<style>
+.container{
+padding:20px;
+position: relative;
+justify-content:center;
+}
+.center {
+position: absolute;
+left:50%;
+}
+</style>
+</head>
+
+
+<body>
+<img src="{{ url_for('static', filename='ledgerimage.jpg' ) }}" />
+
+<div class="column">
+<div class ="container">
+<div class = "center">
+<button>
+<a href="finalhtml">Home</a>
+</button>
+</div>
+</div>
+
+<div class ="container">
+<div class = "center">
+<button>
+<a href="incomeentry">Income Entry</a>
+</button>
+</div>
+</div>
+
+<div class ="container">
+<div class = "center">
+<button>
+<a href="incomeview">Income View </a>
+</button>
+</div>
+</div>
+
+<div class ="container">
+<div class = "center">
+<button>
+<a href="expenseentry">Expense Entry </a>
+</button>
+</div>
+</div>
+
+<div class ="container">
+<div class = "center">
+<button>
+<a href="expenseview">Expense View </a>
+</button>
+</div>
+</div>
+
+<div class ="container">
+<div class = "center">
+<button>
+<a href="headcreation">Header Creation </a>
+</button>
+</div>
+</div>
+
+<div class ="container">
+<div class = "center">
+<button>
+<a href="viewheader">Header View </a>
+</button>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
